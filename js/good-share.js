@@ -20,9 +20,9 @@
 
 	//create share modal for fallback browsers
 	var create_share_modal = function() {
-	   	//create share modal html
-	   	var div = document.createElement('div');
-	   	div.classList.add("good-share-modal");
+		//create share modal html
+		var div = document.createElement('div');
+		div.classList.add("good-share-modal");
 
 	    div.innerHTML = '<button class="close-btn">close</button>' +
 	    				'<div class="good-share-modal-buttons">' +
@@ -47,21 +47,21 @@
 
 	//open share modal
 	var open_share_modal = function( share_title, share_text, share_url ) {
-	    if ( navigator.share ) {
+		if ( navigator.share ) {
 
-	      //web share API is supported
-	      navigator.share({
-            title: share_title,
-            text: share_text,
-            url: share_url
-          }).then(() => {
-            console.log('Thanks for sharing!');
-          })
-          .catch(console.error);
+			//web share API is supported
+			navigator.share({
+				title: share_title,
+				text: share_text,
+				url: share_url
+			}).then(() => {
+				console.log('Thanks for sharing!');
+			})
+			.catch(console.error);
 
 	    } else {
-	      //fallback
-	      document.body.classList.add('good-share-modal-open');
+			//fallback
+			document.body.classList.add('good-share-modal-open');
 	    }
 	}
 
