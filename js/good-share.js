@@ -14,6 +14,10 @@
 	var share_text;
 	var share_url;
 
+	//get current url + page title
+	var current_url = window.location.href;
+	var current_page_title = document.title;
+
 	//create share dialog for fallback browsers
 	var create_share_dialog = function() {
 	   	//create share dialog html
@@ -42,8 +46,8 @@
 
 	create_overlay();
 
-	//open share window
-	var open_share_window = function( share_title, share_text, share_url ) {
+	//open share modal
+	var open_share_modal = function( share_title, share_text, share_url ) {
 	    if ( navigator.share ) {
 
 	      //web share API is supported
@@ -62,12 +66,12 @@
 	    }
 	}
 
-	//close share window
-	var close_share_window = function() {
+	//close share modal
+	var close_share_modal = function() {
 		document.body.classList.remove('share-modal-open');
 	}
 
-	//open facebook share window
+	//open facebook share modal
 	var open_facebook_window = function( facebook_url ) {
 	    window.open(
 	        facebook_url, 'share-facebook','width=580,height=296'
@@ -83,6 +87,7 @@
 	    return false;
 	}
 
+	//open email share window
 	var open_email_window = function( email_url ) {
 	    window.open(
 	        email_url, 'share-email'
@@ -95,31 +100,40 @@
 
 	    if ( event.target.classList.contains( share_btn_selector ) ) {
 	    	//get share title, text and url
-	    	share_title = event.target.dataset.shareTitle;
-	    	share_text = event.target.dataset.shareText;
-	    	share_url = event.target.dataset.shareUrl;
+	    	//set fallback values if not defined
+	    	share_title = event.target.dataset.shareTitle || current_page_title;
+	    	share_text = event.target.dataset.shareText || current_page_title;
+	    	share_url = event.target.dataset.shareUrl || current_url;
 
 	    	//open share window
-	    	open_share_window( share_title, share_text, share_url );
+	    	open_share_modal( share_title, share_text, share_url );
 	    }
 
 	    if ( event.target.classList.contains( close_button_selector ) ) {
-	    	close_share_window();
+	    	close_share_modal();
 	    }
 
 	    if ( event.target.classList.contains( 'facebook-btn' ) ) {
+	    	//construct facebook share url
 	    	facebook_url = "https://www.facebook.com/sharer/sharer.php?u=" + share_url;
+
+	    	//open share window
 	    	open_facebook_window(facebook_url);
 	    }
 
 	    if ( event.target.classList.contains( 'twitter-btn' ) ) {
+	    	//construct twitter share url
 	    	twitter_url = "https://twitter.com/share?text=" + share_title + "&url=" + share_url;
+
+	    	//open share window
 	    	open_twitter_window(twitter_url);
 	    }
 
 	    if ( event.target.classList.contains( 'email-btn' ) ) {
+	    	//construct email share url
 	    	email_url = "mailto:?&body=" + share_url + "&subject=" + share_title;
-	    	console.log(email_url);
+
+	    	//open share window
 	    	open_email_window(email_url);
 	    }
 
@@ -134,7 +148,7 @@
 	    var key = event.key || event.keyCode;
 
 	    if ( key === 'Escape' || key === 'Esc' || key === 27 ) {
-	        close_share_window();
+	        close_share_modal();
 	    }
 	});
 
@@ -143,7 +157,8 @@
 
 	//add event listener to overlay
 	overlay.addEventListener('click', function ( event ) {
-	    close_share_window();
+		//close share window
+	    close_share_modal();
 	});
 
 })();
