@@ -3,8 +3,8 @@
 	//get share button css class selector
 	var share_btn_selector = 'good-share';
 
-	//get share dialog
-	var share_dialog = document.querySelector('.good-share-dialog');
+	//get share modal
+	var share_modal = document.querySelector('.good-share-modal');
 
 	//get close button css class selector
 	var close_button_selector = 'close-btn';
@@ -18,14 +18,14 @@
 	var current_url = window.location.href;
 	var current_page_title = document.title;
 
-	//create share dialog for fallback browsers
-	var create_share_dialog = function() {
-	   	//create share dialog html
+	//create share modal for fallback browsers
+	var create_share_modal = function() {
+	   	//create share modal html
 	   	var div = document.createElement('div');
-	   	div.classList.add("good-share-dialog");
+	   	div.classList.add("good-share-modal");
 
 	    div.innerHTML = '<button class="close-btn">close</button>' +
-	    				'<div class="good-share-dialog-buttons">' +
+	    				'<div class="good-share-modal-buttons">' +
 			            '<button class="facebook-btn">facebook</button>' +
 			            '<button class="twitter-btn">twitter</button>' +
 			            '<button class="email-btn">email</button>'+
@@ -34,11 +34,10 @@
 	    document.body.appendChild(div);
 	}
 
-	create_share_dialog();
+	create_share_modal();
 
-	//create overlay
+	//create share overlay
 	var create_overlay = function() {
-	   	//create share dialog html
 	   	var div = document.createElement('div');
 	   	div.classList.add("good-share-overlay");
 	    document.body.appendChild(div);

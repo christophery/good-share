@@ -8,9 +8,9 @@
     margin: 20px;
 }
 
-/* Share Dialog (Fallback Browsers) */
+/* Share Modal (Fallback Browsers) */
 
-.good-share-dialog {
+.good-share-modal {
     display: none;
     width: 95%;
     max-width: 500px;
@@ -26,7 +26,7 @@
     transform: translate(-50%, -50%);
 }
 
-.good-share-modal-open .good-share-dialog {
+.good-share-modal-open .good-share-modal {
     display: block;
     z-index: 1000;
     animation: fade 200ms;
