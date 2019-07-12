@@ -5,7 +5,7 @@ body{
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 40px;
+	padding: 50px 5%;
 }
 
 .good-share{
@@ -25,4 +25,12 @@ body{
 	background: #256ee2;
 	color: #FFF;
 	outline: 0;
+}
+
+h2{
+	margin-top: 50px;
+}
+
+h2:first-child{
+	margin-top: 0;
 }
