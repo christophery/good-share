@@ -1,0 +1,11 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.good-share{
+    background: #000;
+    color: #FFF;
+    padding: 10px 20px;
+    border: 0;
+    margin: 20px;
+}
