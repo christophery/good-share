@@ -2,10 +2,25 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
 .good-share{
-    background: #000;
-    color: #FFF;
+    border: 1px solid #03a87c;
+    border-radius: 4px;
+    color: #03a87c;
+    font-weight: 600;
+    background: transparent;
     padding: 10px 20px;
-    border: 0;
-    margin: 20px;
+    font-size: 0.85em;
+    margin-right: 20px;
+    transition: all 0.2s;
+}
+
+.good-share:hover{
+	background: #03a87c;
+	color: #FFF;
 }
