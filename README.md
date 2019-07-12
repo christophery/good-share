@@ -18,15 +18,15 @@ For unsupported browsers, a fallback modal window with sharing buttons can be us
 
 - Add the stylesheet in the `<head>` and the JS file in the `<footer>`
 
-``
+```html
 <link rel="stylesheet" href="css/good-share.css">
-``
+```
 
-``
+```html
 <script src="js/good-share.js"></script>
-``
+```
 
-- Add the `.good-share` CSS class to you share buttons along with the [data attribute options](#Options).
+- Add the `.good-share` CSS class to you share buttons along with the [data attribute options](#options).
 
 ```html
 <button class="good-share" data-share-title="Hello World" data-share-url="https://chrisyee.ca">Share This</button>
