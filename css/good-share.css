@@ -10,7 +10,7 @@
 
 /* Share Dialog (Fallback Browsers) */
 
-.share-dialog {
+.good-share-dialog {
     display: none;
     width: 95%;
     max-width: 500px;
@@ -26,7 +26,7 @@
     transform: translate(-50%, -50%);
 }
 
-.share-modal-open .share-dialog {
+.good-share-modal-open .good-share-dialog {
     display: block;
     z-index: 1000;
     animation: fade 200ms;
@@ -34,7 +34,7 @@
 
 /* Overlay */
 
-.share-modal-open .overlay{
+.good-share-modal-open .good-share-overlay{
     content: "";
     width: 100%;
     height: 100%;
