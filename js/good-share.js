@@ -17,6 +17,15 @@
 	var share_text;
 	var share_url;
 
+	//share urls
+	var facebook_url;
+	var twitter_url;
+	var email_url;
+
+	//twitter + email parameters
+	var twitter_url_params;
+	var email_url_params;
+
 	//get current url + page title
 	var current_url = window.location.href;
 	var current_page_title = document.title;
@@ -32,7 +41,6 @@
 		var div = document.createElement('div');
 		div.classList.add('good-share-modal');
 		div.setAttribute('role', 'dialog');
-		div.setAttribute('tabindex', '-1');
 
 	    div.innerHTML = '<button class="close-btn" aria-label="close share modal"></button>' +
 	    				'<div class="good-share-modal-buttons">' +
@@ -122,7 +130,7 @@
 	    	//get share title, text and url
 	    	//set fallback values if not defined
 	    	share_title = event.target.dataset.shareTitle || current_page_title;
-	    	share_text = event.target.dataset.shareText || current_page_title;
+	    	share_text = event.target.dataset.shareText || '';
 	    	share_url = event.target.dataset.shareUrl || current_url;
 	    	focus_selector = event.target.dataset.focus;
 
@@ -143,16 +151,32 @@
 	    }
 
 	    if ( event.target.classList.contains( 'twitter-btn' ) ) {
+
+	    	//check if share text exists
+	    	if( share_text ){
+	    		twitter_url_params = share_title + ' / ' + share_text + "&url=" + share_url;
+	    	}else{
+	    		twitter_url_params = share_title + "&url=" + share_url;
+	    	}
+
 	    	//construct twitter share url
-	    	twitter_url = "https://twitter.com/share?text=" + share_title + "&url=" + share_url;
+	    	twitter_url = "https://twitter.com/intent/tweet?text=" + twitter_url_params ;
 
 	    	//open share window
 	    	open_twitter_window(twitter_url);
 	    }
 
 	    if ( event.target.classList.contains( 'email-btn' ) ) {
+
+	    	//check if share text exists
+	    	if( share_text ){
+	    		email_url_params = share_text + '%0D%0A%0D%0A' + share_url + "&subject=" + share_title;
+	    	}else{
+	    		email_url_params = share_url + "&subject=" + share_title;
+	    	}
+
 	    	//construct email share url
-	    	email_url = "mailto:?&body=" + share_url + "&subject=" + share_title;
+	    	email_url = "mailto:?&body=" + email_url_params;
 
 	    	//open share window
 	    	open_email_window(email_url);
