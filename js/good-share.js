@@ -30,7 +30,9 @@
 	var create_share_modal = function() {
 		//create share modal html
 		var div = document.createElement('div');
-		div.classList.add("good-share-modal");
+		div.classList.add('good-share-modal');
+		div.setAttribute('role', 'dialog');
+		div.setAttribute('tabindex', '-1');
 
 	    div.innerHTML = '<button class="close-btn" aria-label="close share modal"></button>' +
 	    				'<div class="good-share-modal-buttons">' +
