@@ -9,6 +9,9 @@
 	//get close button css class selector
 	var close_button_selector = 'close-btn';
 
+	//store element before share modal opened
+	var active_element;
+
 	//share parameters
 	var share_title;
 	var share_text;
@@ -52,6 +55,7 @@
 
 	//open share modal
 	var open_share_modal = function( share_title, share_text, share_url ) {
+
 		if ( navigator.share ) {
 
 			//web share API is supported
@@ -68,14 +72,21 @@
 			//fallback
 			document.body.classList.add('good-share-modal-open');
 
+			//remember which element before share modal opened
+			active_element = document.activeElement;
+
 			//focus on first social button in share modal
 			document.querySelector(".good-share-modal-buttons > button").focus();
+
 	    }
 	}
 
 	//close share modal
 	var close_share_modal = function() {
 		document.body.classList.remove('good-share-modal-open');
+
+		//restore focus to element before we opened the share modal
+		active_element.focus();
 	}
 
 	//open facebook share modal
