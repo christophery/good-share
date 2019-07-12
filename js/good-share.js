@@ -26,9 +26,9 @@
 
 	    div.innerHTML = '<button class="close-btn">close</button>' +
 	    				'<div class="good-share-modal-buttons">' +
-			            '<button class="facebook-btn">facebook</button>' +
-			            '<button class="twitter-btn">twitter</button>' +
-			            '<button class="email-btn">email</button>'+
+			            	'<button class="facebook-btn">facebook</button>' +
+			            	'<button class="twitter-btn">twitter</button>' +
+			            	'<button class="email-btn">email</button>'+
 			            '</div>';
 
 	    document.body.appendChild(div);
