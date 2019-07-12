@@ -9,20 +9,20 @@ body{
 }
 
 .good-share{
-    border: 1px solid #3eb0ef;
+    border: 1px solid #256ee2;
     border-radius: 4px;
-    color: #3eb0ef;
+    color: #256ee2;
     font-weight: 600;
     background: transparent;
     padding: 10px 20px;
     font-size: 0.85em;
     margin-right: 20px;
-    transition: all 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 .good-share:hover,
 .good-share:focus{
-	background: #3eb0ef;
+	background: #256ee2;
 	color: #FFF;
 	outline: 0;
 }
