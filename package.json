@@ -1,0 +1,15 @@
+{
+  "name": "good-share",
+  "description": "Good Share is a share button library with Web Share API integration",
+  "version": "1.0.0",
+  "homepage": "https://chrisyee.ca/good-share/",
+  "license": "MIT",
+  "author": {
+    "name": "Chris Yee",
+    "url": "https://chrisyee.ca/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christophery/good-share.git"
+  },
+}
