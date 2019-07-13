@@ -98,6 +98,7 @@
 .good-share-modal-buttons .btn svg{
     width: 20px;
     margin-right: 8px;
+    pointer-events: none;
 }
 
 /* Social Media Icons */
