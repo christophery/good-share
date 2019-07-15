@@ -2,9 +2,13 @@
 
 Good Share is a share button library with [Web Share API](https://css-tricks.com/how-to-use-the-web-share-api/) integration.
 
-Using the Web Share API, it allows the user to share content using the native share dialog on [supported browsers](https://caniuse.com/#feat=web-share).
+Using the Web Share API, it allows the user to share content using the native share dialog on [supported browsers](https://caniuse.com/#feat=web-share). 
 
 For unsupported browsers, a fallback modal window with sharing buttons can be used by the user.
+
+Feel free to [let me know](https://twitter.com/cmyee) if you use Geist in one of your websites.
+
+[View Demo](https://chrisyee.ca/good-share) | [Download](https://github.com/christophery/good-share/releases)
 
 ## Features
 - Web Share API for native share
@@ -20,14 +24,14 @@ For unsupported browsers, a fallback modal window with sharing buttons can be us
 
 ## Getting Started
 
-- Add the stylesheet in the `<head>` and the JS file in the `<footer>`
+- Include the CSS and JS files from the `dist/` folder.
 
 ```html
-<link rel="stylesheet" href="css/good-share.css">
+<link rel="stylesheet" href="css/good-share.min.css">
 ```
 
 ```html
-<script src="js/good-share.js"></script>
+<script src="js/good-share.min.js"></script>
 ```
 
 - Add the `.good-share` CSS class to you share buttons along with the [data attribute options](#options).
@@ -54,3 +58,16 @@ The text to be shared.
 The URL to be shared.
 
 ``data-share-url="https://chrisyee.ca"``
+
+
+## Development
+Good Share CSS and JS are compiled and minified using Gulp. You'll need [Node](https://nodejs.org/en/) and [Gulp](https://gulpjs.com/) installed globally.
+
+**From the root directory run:**
+
+```
+$ npm install
+$ gulp
+```
+
+Now you can edit `css/good-share.scss` and `js/good-share.js`, which will be compiled to `dist/` automatically.
