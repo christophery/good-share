@@ -5,10 +5,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    max-width: 480px;
+    width: 90%;
+    max-width: 550px;
     box-shadow: rgba(0,0,0,0.15) 0px 2px 10px;
-    padding: 50px 30px;
+    padding: 50px 30px 30px;
     border-radius: 4px;
     background-color: #FFF;
     transform: translate(-50%, -50%);
@@ -79,14 +79,17 @@
 .good-share-modal-buttons{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     .btn{
         display: flex;
         align-items: center;
+        justify-content: center;
         background: transparent;
         border: 1px solid #848484;
         border-radius: 3px;
         padding: 10px 25px;
+        margin-bottom: 20px;
         font-size: 0.8em;
         transition: border 0.2s;
         cursor: pointer;
@@ -141,5 +144,15 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 400px) {
+    .good-share-modal-buttons{
+        .btn{
+            width: 100%;
+        }
     }
 }
