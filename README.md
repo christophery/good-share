@@ -6,9 +6,9 @@ Using the Web Share API, it allows the user to share content using the native sh
 
 For unsupported browsers, a fallback modal window with sharing buttons can be used by the user.
 
-Feel free to [let me know](https://twitter.com/cmyee) if you use Geist in one of your websites.
+Feel free to [let me know](https://twitter.com/cmyee) if you use Good Share in one of your websites.
 
-[View Demo](https://chrisyee.ca/good-share) | [Download](https://github.com/christophery/good-share/releases)
+[View Demo](https://chrisyee.ca/good-share/) | [Download](https://github.com/christophery/good-share/releases/latest)
 
 ## Features
 - Web Share API for native share
