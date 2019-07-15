@@ -2,17 +2,15 @@
 
 .good-share-modal{
     display: none;
-    width: 100%;
-    max-width: 480px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
-    z-index: -1;
-    border: 1px solid #e4e4e4;
-    padding: 50px 30px;
-    border-radius: 4px;
-    background-color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: rgba(0,0,0,0.15) 0px 2px 10px;
+    padding: 50px 30px;
+    border-radius: 4px;
+    background-color: #FFF;
     transform: translate(-50%, -50%);
     visibility: hidden;
 }
@@ -20,22 +18,21 @@
 .good-share-modal-open{
     .good-share-modal{
         display: block;
-        z-index: 1000;
         animation: fade 200ms;
         visibility: visible;
+        z-index: 1000;
     }
 
     /* Overlay */
     .good-share-overlay{
-        content: "";
+        position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
         background: rgba(255,255,255,0.95);
-        position: absolute;
-        top: 0;
-        z-index: 900;
         transition: all 0.2s;
         animation: fade 200ms;
+        z-index: 900;
     }
 
 }
@@ -51,6 +48,7 @@
     background: transparent;
     border: 0;
     transition: opacity 0.2s;
+    cursor: pointer;
 
     &:hover{
         opacity: 0.5;
@@ -58,10 +56,10 @@
 
     &:before,
     &:after {
+        content: '';
         position: absolute;
         top: 2px;
         left: 14px;
-        content: ' ';
         height: 25px;
         width: 2px;
         background-color: #848484;
@@ -91,6 +89,7 @@
         padding: 10px 25px;
         font-size: 0.8em;
         transition: border 0.2s;
+        cursor: pointer;
     }
 
     .btn:hover{
@@ -129,6 +128,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -138,6 +138,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }

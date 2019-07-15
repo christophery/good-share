@@ -18,6 +18,7 @@ body{
     font-size: 0.85em;
     margin-right: 20px;
     transition: background 0.2s, color 0.2s;
+    cursor: pointer;
 }
 
 .good-share:hover,
