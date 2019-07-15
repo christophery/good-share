@@ -119,13 +119,13 @@
     stroke: #FFF;
 }
 
-.email-btn svg polyline{
+.email-btn svg path{
     stroke: #FFF;
 }
 
 /* CSS Animations */
 
-@keyframes fade {
+@keyframes fade{
     0% {
         opacity: 0;
     }
@@ -134,7 +134,7 @@
     }
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fade{
     0% {
         opacity: 0;
     }
