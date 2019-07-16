@@ -132,7 +132,6 @@
 	    	share_title = event.target.dataset.shareTitle || current_page_title;
 	    	share_text = event.target.dataset.shareText || '';
 	    	share_url = event.target.dataset.shareUrl || current_url;
-	    	focus_selector = event.target.dataset.focus;
 
 	    	//open share window
 	    	open_share_modal( share_title, share_text, share_url );
