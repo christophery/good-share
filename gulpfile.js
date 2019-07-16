@@ -9,8 +9,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
+var babel = require("gulp-babel");
 var replace = require('gulp-replace');
-
 
 // File paths
 const files = {
@@ -33,6 +33,9 @@ function scssTask(){
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask(){
     return src(files.jsPath)
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
         .pipe(concat('good-share.min.js'))
         .pipe(terser()) //uglify
         .pipe(dest('dist')
