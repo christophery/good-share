@@ -63,10 +63,13 @@
 
 	create_overlay();
 
+	//check if using Samsung Browser
+	var isSamsungBrowser = navigator.userAgent.match(/SamsungBrowser/i);
+
 	//open share modal
 	var open_share_modal = function( share_title, share_text, share_url ) {
 
-		if ( navigator.share ) {
+		if ( navigator.share && isSamsungBrowser === null ) {
 
 			//web share API is supported
 			navigator.share({
