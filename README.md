@@ -17,7 +17,7 @@ Feel free to [let me know](https://twitter.com/cmyee) if you use Good Share in o
 - Uses CSS animations
 - Fallback modal closes when the site overlay is selected
 - Keyboard support for closing fallback modal (esc key)
-- Supports [Open Graph Meta Tags](https://ogp.me/)
+- Supports [Open Graph Metadata](https://ogp.me/)
 
 ## Requirements
 - Your website must be served over [HTTPS](https://www.cloudflare.com/learning/ssl/what-is-https/)
