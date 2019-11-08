@@ -144,7 +144,7 @@
 	    if ( event.target.classList.contains( share_btn_selector ) ) {
 	    	//get share title, text and url
 	    	//set fallback values if not defined
-	    	share_title = event.target.dataset.shareTitle || og_title ||current_page_title;
+	    	share_title = event.target.dataset.shareTitle || og_title || current_page_title;
 	    	share_text = event.target.dataset.shareText || og_description || '';
 	    	share_url = event.target.dataset.shareUrl || og_url || current_url;
 
