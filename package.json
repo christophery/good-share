@@ -30,6 +30,6 @@
     "@babel/core": "^7.5.4"
   },
   "browserslist": [
-      "last 2 versions"
+    "last 2 versions"
   ]
 }
