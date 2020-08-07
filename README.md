@@ -35,7 +35,7 @@ Feel free to [let me know](https://twitter.com/cmyee) if you use Good Share in o
 <script src="js/good-share.min.js"></script>
 ```
 
-- Add the `.good-share` CSS class to you share buttons along with the [data attribute options](#options).
+- Add the `.good-share` CSS class to your share buttons along with the [data attribute options](#options).
 
 ```html
 <button class="good-share" data-share-title="Hello World" data-share-url="https://chrisyee.ca">
