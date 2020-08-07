@@ -148,6 +148,14 @@
 	    	share_text = event.target.dataset.shareText || og_description || '';
 	    	share_url = event.target.dataset.shareUrl || og_url || current_url;
 
+	    	//check if fallback share
+	    	if( navigator.share == null ){
+	    		//escape special characters
+	    		share_title = encodeURIComponent(share_title);
+	    		share_text = encodeURIComponent(share_text);
+	    		share_url = encodeURIComponent(share_url);
+	    	}
+
 	    	//open share window
 	    	open_share_modal( share_title, share_text, share_url );
 	    }

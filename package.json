@@ -1,7 +1,7 @@
 {
   "name": "good-share",
   "description": "Good Share is a share button library with Web Share API integration",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://chrisyee.ca/good-share/",
   "license": "MIT",
   "author": {
@@ -30,6 +30,6 @@
     "@babel/core": "^7.5.4"
   },
   "browserslist": [
-      "last 2 versions"
+    "last 2 versions"
   ]
 }
