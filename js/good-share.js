@@ -9,6 +9,9 @@
 	//get close button css class selector
 	var close_button_selector = 'close-btn';
 
+	//get overlay
+	var overlay_selector = 'good-share-overlay';
+
 	//store element before share modal opened
 	var active_element;
 
@@ -160,7 +163,7 @@
 	    	open_share_modal( share_title, share_text, share_url );
 	    }
 
-	    if ( event.target.classList.contains( close_button_selector ) ) {
+	    if ( event.target.classList.contains( close_button_selector ) || event.target.classList.contains( overlay_selector ) ) {
 	    	close_share_modal();
 	    }
 
@@ -217,15 +220,6 @@
 	    if ( key === 'Escape' || key === 'Esc' || key === 27 ) {
 	        close_share_modal();
 	    }
-	});
-
-	//get overlay
-	var overlay = document.querySelector( '.good-share-overlay' );
-
-	//add event listener to overlay
-	overlay.addEventListener('click', function ( event ) {
-		//close share window
-	    close_share_modal();
 	});
 
 })();
