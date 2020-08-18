@@ -3,9 +3,6 @@
 	//get share button css class selector
 	var share_btn_selector = 'good-share';
 
-	//get share modal
-	var share_modal = document.querySelector('.good-share-modal');
-
 	//get close button css class selector
 	var close_button_selector = 'close-btn';
 
